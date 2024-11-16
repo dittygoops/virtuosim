@@ -17,7 +17,10 @@ export function Navbar() {
             <span className="sr-only">Virtuosim</span>
             <div className="flex items-center space-x-2">
               <Logo className="h-8 w-auto fill-current text-purple-800" />
-              <span className="font-light text-lg">X</span>
+              <span className="font-semibold text-xl text-purple-800">
+                Virtuosim
+              </span>
+              <span className="font-light text-lg mt-0.5">X</span>
               <img className="h-[4rem] mt-1" src="/honeywell-logo.png" alt="" />
             </div>
           </a>

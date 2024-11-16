@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import {
   Dialog,
   DialogBackdrop,
@@ -187,7 +187,7 @@ const ChatStream = () => {
     setCurrentStreamingText("");
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (!currentInput.trim()) return;
 
