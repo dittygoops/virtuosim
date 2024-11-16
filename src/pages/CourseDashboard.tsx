@@ -1,7 +1,9 @@
+import Navbar from "../components/Navbar";
+
 export const CourseDashboard = () => {
   return (
     <div>
-      <h1>Course Dashboard</h1>
+      <Navbar />
     </div>
   );
 };
