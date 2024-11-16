@@ -1,6 +1,3 @@
-import React from 'react';
-import './CourseCard.css'; // Import the CSS file for styling
-
 interface CourseCardProps {
     name: string;
     totalModules: number;
@@ -12,22 +9,34 @@ const CourseCard: React.FC<CourseCardProps> = ({ name, totalModules, completedMo
     const completionPercentage = (completedModules / totalModules) * 100;
 
     return (
-        <div className="course-card">
-            <h2>{name}</h2>
-            <p>Modules Completed: {completedModules} / {totalModules}</p>
-            
+        <div className="course-card p-1 bg-white shadow-md rounded-lg flex justify-around items-center">            
+            {/* Course Info */}
+            <div className="flex flex-col justify-center items-center w-1/3">
+            <p className="text-xl font-bold text-center mb-4">{name}</p>
             {/* Progress Bar */}
-            <div className="progress-bar">
+            <div className="progress-bar w-full bg-gray-200 rounded-full h-4">
                 <div 
-                    className="progress-bar-fill" 
-                    style={{ width: `${completionPercentage}%` }} 
+                className="progress-bar-fill bg-purple-800 h-4 rounded-full" 
+                style={{ width: `${completionPercentage}%` }} 
                 />
             </div>
-
+            <p className="text-gray-700 mb-4 text-center">Modules Completed: {completedModules} / {totalModules}</p>
+            </div>
+            
             {/* Buttons */}
-            <div className='button-group'>
-                <button onClick={() => alert('Recap clicked')}>Recap</button>
-                <button onClick={() => alert('Learn clicked')}>Learn</button>
+            <div className='button-group flex space-x-2 justify-center w-1/3'>
+            <button 
+                className="bg-purple-800 text-white py-2 px-4 rounded hover:bg-purple-600 transition duration-300 ease-in-out"
+                onClick={() => window.location.href = '/presentation'}
+            >
+                Recap
+            </button>
+            <button 
+                className="bg-green-600 text-white py-2 px-4 rounded hover:bg-green-500 transition duration-300 ease-in-out"
+                onClick={() => window.location.href = '/presentation'}
+            >
+                Learn
+            </button>
             </div>
         </div>
     );
