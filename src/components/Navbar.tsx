@@ -6,9 +6,9 @@ const navigation = [
   { name: "Get Help", href: "#" },
 ];
 
-export default function Navbar() {
+export function Navbar() {
   return (
-    <header className="bg-white">
+    <header className="bg-white border border-b-2">
       <nav
         aria-label="Global"
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
