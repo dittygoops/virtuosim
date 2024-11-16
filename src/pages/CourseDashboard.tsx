@@ -1,11 +1,13 @@
 import { Navbar } from "../components/Navbar";
 import { NeedHelp } from "../components/NeedHelp";
+import CourseCard from "../components/CourseCard";
+import BikeIcon from '../assets/BikeIcon.svg';
 
 import { useState } from "react";
 
 export const CourseDashboard = () => {
   const [courses, setCourses] = useState([
-    { name: "Tank Engine 1", totalModules: 10, completedModules: 5 },
+    { icon: BikeIcon, name: "Tank Engine 1", totalModules: 10, completedModules: 5 },
     { name: "Plane Cockpit 1", totalModules: 6, completedModules: 2 },
     { name: "Plane Cockpit 2", totalModules: 13, completedModules: 0 }
   ]);
@@ -16,15 +18,15 @@ export const CourseDashboard = () => {
         <Navbar />
         <NeedHelp />
 
-      <div className="flex justify-center min-h-screen">
-        <div className="course-containers w-2/5 flex flex-col gap-4">
+      <div className="flex justify-center h-3/5">
+        <div className="course-containers w-4/5 flex flex-col gap-4">
           {courses.map((course, index) => (
-            <CourseCard
-              key={index}
-              name={course.name}
-              totalModules={course.totalModules}
-              completedModules={course.completedModules}
-            />
+        <CourseCard
+          key={index}
+          name={course.name}
+          totalModules={course.totalModules}
+          completedModules={course.completedModules}
+        />
           ))}
         </div>
       </div>
