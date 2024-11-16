@@ -1,4 +1,5 @@
 interface CourseCardProps {
+    icon: string;
     name: string;
     totalModules: number;
     completedModules: number;
