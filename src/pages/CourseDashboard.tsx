@@ -7,6 +7,22 @@ export const CourseDashboard = () => {
       <div className="w-full h-full bg-gradient-to-b from-white via-transparent to-white">
         <Navbar />
         <NeedHelp />
+      <div className="course-containers">
+        <CourseCard
+          name="React Basics"
+          totalModules={10}
+          completedModules={5}
+        />
+        <CourseCard
+          name="React Hooks"
+          totalModules={8}
+          completedModules={3}
+        />
+        <CourseCard
+          name="React Router"
+          totalModules={6}
+          completedModules={2}
+        />
       </div>
     </div>
   );
