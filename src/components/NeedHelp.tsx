@@ -54,7 +54,7 @@ export function NeedHelp() {
       </Transition>
 
       <button
-        className="text-white rounded-full px-4 py-2.5 font-semibold shadow-2xl bg-purple-500"
+        className="text-white rounded-full px-4 py-2.5 font-semibold shadow-xl bg-purple-800 hover:bg-purple-900 transition duration-300 ease-in-out"
         onClick={() => setOpen(!open)}>
         {open ? "X" : "Need Help?"}
       </button>
@@ -79,13 +79,13 @@ function DefaultScreen(props: { setSelection: (selection: string) => void }) {
       <div className="mt-5 sm:mt-6">
         <button
           type="button"
-          className="inline-flex w-full justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          className="inline-flex w-full justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 transition duration-300 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           onClick={() => props.setSelection("chatbot")}>
           Talk to Chatbot
         </button>
         <button
           type="button"
-          className="inline-flex w-full justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 mt-2"
+          className="inline-flex w-full justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 transition duration-300 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 mt-2"
           onClick={() => props.setSelection("expert")}>
           Reach out to Expert
         </button>
@@ -257,7 +257,7 @@ const ChatStream = () => {
           />
           <button
             type="submit"
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 p-2 text-gray-400 hover:text-gray-600">
+            className="absolute right-2 top-1/2 transform -translate-y-1/2 p-2 text-gray-600 hover:text-gray-800">
             <Send className="w-5 h-5" />
           </button>
         </div>
