@@ -1,14 +1,15 @@
 import { Navbar } from "../components/Navbar";
 import { NeedHelp } from "../components/NeedHelp";
 import CourseCard from "../components/CourseCard";
-import BikeIcon from "../assets/BikeIcon.svg";
-import PlaneIcon from "../assets/PlaneIcon.svg";
+import BikeIcon from "../assets/bike.jpg"
+import PlaneIcon from "../assets/plane.jpg";
+import Plane1Icon from "../assets/plane1.avif";
 
 export const CourseDashboard = () => {
   const courses = [
     { icon: BikeIcon, name: "Bike 1", totalModules: 10, completedModules: 5 },
     {
-      icon: PlaneIcon,
+      icon: Plane1Icon,
       name: "Plane Cockpit 1",
       totalModules: 6,
       completedModules: 2,
