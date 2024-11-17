@@ -31,7 +31,7 @@ export const CourseDashboard = () => {
 
         <div className="flex justify-center h-3/5 py-8">
           <div className="course-containers w-4/5 flex flex-col gap-4">
-            <button className="p-5 py-4 bg-gradient-to-r from-purple-700 to-purple-800 hover:from-purple-800 hover:to-purple-900 transition duration-300 ease-in-out text-white text-xl text-left rounded-lg flex justify-between">
+            <button className="p-5 py-4 shadow-xl bg-gradient-to-r from-purple-700 to-purple-800 hover:from-purple-800 hover:to-purple-900 transition duration-300 ease-in-out text-white text-xl text-left rounded-lg flex justify-between">
               <div className="flex flex-col gap-y-2">
                 <div className="flex items-center gap-x-2">
                 <BookOpenIcon className="size-6" />
