@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { Logo } from "./logo";
 
 const navigation = [
@@ -7,6 +8,7 @@ const navigation = [
 ];
 
 export function Navbar() {
+  const navigate = useNavigate();
   return (
     <header className="bg-white border border-b-2">
       <nav
@@ -15,7 +17,8 @@ export function Navbar() {
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Virtuosim</span>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2"
+            onClick={() => navigate("/")}>
               <Logo className="h-8 w-auto fill-current text-purple-800" />
               <span className="font-semibold text-xl text-purple-800">
                 Virtuosim
